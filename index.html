@@ -38,37 +38,27 @@
             Nikon 50mm F1.4D AF
           </div>
 
-          <div class="text-light border-bottom border-2 py-2 mb-4" style="font-size: 24px">Specificatii</div>
-          <div class="fw-bold border rounded bg-light text-dark p-2 ps-4 my-2" id="previewInfo1">
-            Diafragma f/1.4-f/16
-          </div>
-          <div
-            class="fw-bold border rounded bg-light text-dark p-2 ps-4 my-2"
-            id="previewInfo2"
-            style="font-size: 16px"
-          >
-            Dimensiunea filtru: 52mm
-          </div>
-          <div
-            class="fw-bold border rounded bg-light text-dark p-2 ps-4 my-2"
-            id="previewInfo3"
-            style="font-size: 16px"
-          >
-            Distanta minima de focalizare: 46cm
-          </div>
-          <div
-            class="fw-bold border rounded bg-light text-dark p-2 ps-4 my-2"
-            id="previewInfo4"
-            style="font-size: 16px"
-          >
-            Dimensiunea 6.35 x 4.32mm
-          </div>
-          <div
-            class="fw-bold border rounded bg-light text-dark p-2 ps-4 my-2"
-            id="previewInfo5"
-            style="font-size: 16px"
-          >
-            Greutate: 230g
+          <div class="text-light fw-bolder py-1" style="font-size: 16px">
+            <div class="border-top border-bottom border-secondary p-3 d-flex">
+              <div class="fw-normal pe-2" id="prevInfo1Title">Diafragma:</div>
+              <div id="prevInfo1Text">F/1.4-F/16</div>
+            </div>
+            <div class="border-bottom border-secondary p-3 d-flex" style="word-wrap: break-all">
+              <div class="fw-normal pe-2" id="prevInfo2Title">Dimensiunea filtru:</div>
+              <div id="prevInfo2Text">52mm</div>
+            </div>
+            <div class="border-bottom border-secondary p-3 d-flex" style="word-wrap: break-all">
+              <div class="fw-normal pe-2" id="prevInfo3Title">Distanta minima de focalizare:</div>
+              <div id="prevInfo3Text">46cm</div>
+            </div>
+            <div class="border-bottom border-secondary p-3 d-flex" style="word-wrap: break-all">
+              <div class="fw-normal pe-2" id="prevInfo4Title">Dimensiunea:</div>
+              <div id="prevInfo4Text">6.35 x 4.32mm</div>
+            </div>
+            <div class="border-bottom border-secondary p-3 d-flex" style="word-wrap: break-all">
+              <div class="fw-normal pe-2" id="prevInfo5Title">Greutate:</div>
+              <div id="prevInfo5Text">230g</div>
+            </div>
           </div>
         </div>
       </div>
@@ -116,47 +106,93 @@
           </div>
           <div class="input-group mb-2">
             <span class="input-group-text">Info #1</span>
+
             <input
+              placeholder="Insert info#1 title"
               type="text"
               class="form-control"
               id="input"
-              onkeyup="document.getElementById('previewInfo1').innerHTML = this.value"
+              onkeyup="document.getElementById('prevInfo1Title').innerHTML = this.value"
+            />
+
+            <input
+              placeholder="Insert info#1 text"
+              type="text"
+              class="form-control"
+              id="input"
+              onkeyup="document.getElementById('prevInfo1Text').innerHTML = this.value"
             />
           </div>
           <div class="input-group mb-2">
             <span class="input-group-text">Info #2</span>
             <input
+              placeholder="Insert info#2 title"
               type="text"
               class="form-control"
               id="input"
-              onkeyup="document.getElementById('previewInfo2').innerHTML = this.value"
+              onkeyup="document.getElementById('prevInfo2Title').innerHTML = this.value"
+            />
+
+            <input
+              placeholder="Insert info#2 text"
+              type="text"
+              class="form-control"
+              id="input"
+              onkeyup="document.getElementById('prevInfo2Text').innerHTML = this.value"
             />
           </div>
           <div class="input-group mb-2">
             <span class="input-group-text">Info #3</span>
             <input
+              placeholder="Insert info#3 title"
               type="text"
               class="form-control"
               id="input"
-              onkeyup="document.getElementById('previewInfo3').innerHTML = this.value"
+              onkeyup="document.getElementById('prevInfo3Title').innerHTML = this.value"
+            />
+
+            <input
+              placeholder="Insert info#3 text"
+              type="text"
+              class="form-control"
+              id="input"
+              onkeyup="document.getElementById('prevInfo3Text').innerHTML = this.value"
             />
           </div>
           <div class="input-group mb-2">
             <span class="input-group-text">Info #4</span>
             <input
+              placeholder="Insert info#4 title"
               type="text"
               class="form-control"
               id="input"
-              onkeyup="document.getElementById('previewInfo4').innerHTML = this.value"
+              onkeyup="document.getElementById('prevInfo4Title').innerHTML = this.value"
+            />
+
+            <input
+              placeholder="Insert info#4 text"
+              type="text"
+              class="form-control"
+              id="input"
+              onkeyup="document.getElementById('prevInfo4Text').innerHTML = this.value"
             />
           </div>
           <div class="input-group mb-2">
             <span class="input-group-text">Info #5</span>
             <input
+              placeholder="Insert info#5 title"
               type="text"
               class="form-control"
               id="input"
-              onkeyup="document.getElementById('previewInfo5').innerHTML = this.value"
+              onkeyup="document.getElementById('prevInfo5Title').innerHTML = this.value"
+            />
+
+            <input
+              placeholder="Insert info#5 text"
+              type="text"
+              class="form-control"
+              id="input"
+              onkeyup="document.getElementById('prevInfo5Text').innerHTML = this.value"
             />
           </div>
 
