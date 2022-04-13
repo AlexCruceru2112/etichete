@@ -13,12 +13,74 @@
     <title>Generator de Etichete</title>
   </head>
   <body>
-    <div class="d-flex">
+    <div class="container d-flex align-items-center m-5">
+      <!--LIVE PREVIEW-->
+      <div class="container">
+        <div class="text-dark lead fw-normal mb-2">Live Preview</div>
+
+        <div class="p-5 shadow-sm" id="eticheta" style="width: 420px; min-height: 700px; background-color: #262223">
+          <div
+            class="border-bottom border-light border-2 d-flex align-items-center justify-content-between pb-4 mt-5 mb-2"
+          >
+            <div class="d-flex flex-column">
+              <div
+                class="display-4 fw-bolder text-light"
+                id="previewMarca"
+                style="width: 200px; word-wrap: break-all; font-size: 48px"
+              >
+                Nikon
+              </div>
+              <div class="d-flex align-items-center" style="font-size: 24px">
+                <div class="text-warning fw-bolder d-flex" id="previewPret">1399</div>
+                <div class="text-light ps-1">RON</div>
+              </div>
+            </div>
+
+            <canvas class="border border-2" id="qrcode" style="width: 100px; height: 100px"></canvas>
+          </div>
+          <div class="fw-bolder text-light pb-5" id="previewNume" style="word-wrap: break-all; font-size: 24px">
+            Nikon 50mm F1.4D AF
+          </div>
+
+          <div class="text-light border-bottom border-2 py-2 mb-4" style="font-size: 24px">Specificatii</div>
+          <div class="fw-bold border rounded bg-light text-dark p-2 ps-4 my-2" id="previewInfo1">
+            Diafragma f/1.4-f/16
+          </div>
+          <div
+            class="fw-bold border rounded bg-light text-dark p-2 ps-4 my-2"
+            id="previewInfo2"
+            style="font-size: 16px"
+          >
+            Dimensiunea filtru: 52mm
+          </div>
+          <div
+            class="fw-bold border rounded bg-light text-dark p-2 ps-4 my-2"
+            id="previewInfo3"
+            style="font-size: 16px"
+          >
+            Distanta minima de focalizare: 46cm
+          </div>
+          <div
+            class="fw-bold border rounded bg-light text-dark p-2 ps-4 my-2"
+            id="previewInfo4"
+            style="font-size: 16px"
+          >
+            Dimensiunea 6.35 x 4.32mm
+          </div>
+          <div
+            class="fw-bold border rounded bg-light text-dark p-2 ps-4 my-2"
+            id="previewInfo5"
+            style="font-size: 16px"
+          >
+            Greutate: 230g
+          </div>
+        </div>
+      </div>
       <!--GENERATOR-->
-      <div class="container m-5">
+      <div class="container">
         <div class="border bg-light py-4 px-3 rounded shadow-sm" style="width: 550px">
-          <div class="input-group mb-2 mb-2">
-            <span class="input-group-text">Link</span>
+          <div class="input-group mb-2">
+            <span class="input-group-text">QR Link</span>
             <input
               id="website"
               type="url"
@@ -29,13 +91,31 @@
             />
             <span class="btn btn-dark" onclick="generateQRCode()">Get QR</span>
           </div>
-          <div class="input-group input-group-lg mb-4">
-            <span class="input-group-text">Nume produs</span>
+          <div class="input-group mb-2">
+            <span class="input-group-text">Marca</span>
+            <input
+              type="text"
+              class="form-control"
+              id="marcaInput"
+              onkeyup="document.getElementById('previewMarca').innerHTML = this.value"
+            />
+          </div>
+          <div class="input-group mb-2">
+            <span class="input-group-text">Nume</span>
             <input
               type="text"
               class="form-control"
               id="nameInput"
-              onkeyup="document.getElementById('previewName').innerHTML = this.value"
+              onkeyup="document.getElementById('previewNume').innerHTML = this.value"
+            />
+          </div>
+          <div class="input-group mb-4">
+            <span class="input-group-text">Pret</span>
+            <input
+              type="number"
+              class="form-control"
+              id="input"
+              onkeyup="document.getElementById('previewPret').innerHTML = this.value"
             />
           </div>
           <div class="input-group mb-2">
@@ -88,24 +168,6 @@
             <button type="button" class="btn btn-danger me-2" id="clearBTN">Sterge datele</button>
             <button type="button" class="btn btn-success" id="printBTN">Printeaza eticheta</button>
           </div>
-        </div>
-      </div>
-      <!--LIVE PREVIEW-->
-
-      <div class="container m-2">
-        <div class="text-light lead fw-normal my-4">Live Preview</div>
-        <div class="border bg-light p-5 shadow-sm" id="eticheta" style="width: 550px; min-height: 600px">
-          <div class="d-flex align-items-start justify-content-between mb-5">
-            <div class="h1" id="previewName" style="width: 300px; word-wrap: break-all">
-              Aparat foto DSLR Nikon D5600, Kit AF-P 18-55mm VR, Negru
-            </div>
-            <canvas id="qrcode" style="width: 100px; height: 100px"></canvas>
-          </div>
-          <div class="h4 bg-dark text-light p-2" id="previewInfo1">Constructie Kit 18-55mm</div>
-          <div class="h4 text-dark px-2" id="previewInfo2">Model D-SLR D5600</div>
-          <div class="h4 bg-dark text-light p-2" id="previewInfo3">Diagonala display 3.2 inch</div>
-          <div class="h4 text-dark px-2" id="previewInfo4">Functii Touchscreen LCD</div>
-          <div class="h4 bg-dark text-light p-2" id="previewInfo5">Greutate 465 g</div>
         </div>
       </div>
     </div>
