@@ -1,0 +1,5 @@
+1. Deschideti fisierul index.html cu Visual Studio Code
+2. Instalati extensia Live Server ( daca nu este deja) in Visual Sudio Code
+3. Click dreapta pe fisierul index.html -> Open with Live Server
+
+sau (public) : https://alexcruceru2112.github.io/etichete/
