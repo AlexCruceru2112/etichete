@@ -24,7 +24,7 @@
     <title>Generator de Etichete</title>
   </head>
   <body class="bg-dark" style="zoom: 80%">
-    <div class="container d-flex align-items-end">
+    <div class="container d-flex align-items-center">
       <!--GENERATOR-->
       <div class="container m-5">
         <div
@@ -167,9 +167,9 @@
       <div class="container m-5">
         <div class="text-light lead fw-normal mb-2">Live Preview</div>
         <div
-          class="p-2 shadow-sm border border-light border-2 bg-light"
+          class="p-2 border border-light border-2"
           id="eticheta"
-          style="width: 550px; min-height: 700px"
+          style="width: 550px; min-height: 700px; background-color: #fff"
         >
           <div
             style="
@@ -183,8 +183,8 @@
 
           <!--qr & descriere div-->
           <div
-            class="d-flex align-items-start justify-content-between border-bottom border-5 border-dark pb-4"
-            style="margin-top: 125px"
+            class="d-flex align-items-start justify-content-between pb-5"
+            style="margin-top: 125px; border-bottom: 5px solid #283040ff"
           >
             <!--qr div-->
             <canvas
@@ -195,14 +195,15 @@
 
             <!--descriere div-->
             <div
-              class="text-dark p-3 pt-5"
+              class="p-4 pt-5"
               id="previewNume"
               style="
+                text-align: left;
+                color: #283040ff;
                 word-wrap: break-all;
                 font-size: 32px;
                 font-weight: 700;
                 line-height: 35px;
-                opacity: 0.9;
               "
             >
               DSLR Nikon D5600, Kit AF-P 18-55mm VR, Negru
@@ -213,97 +214,66 @@
           <div class="d-flex flex-column mb-3 p-4 my-4">
             <!--col div-->
             <div class="d-flex my-1" style="background-color: #241c1f10">
-              <div
-                style="background-color: #241c1f; width: 16px; opacity: 0.9"
-              ></div>
-              <div
-                class="d-flex flex-column ps-5 p-2"
-                style="font-size: 24px; opacity: 0.9"
-              >
-                <div
-                  class="text-dark"
-                  id="prevInfo1Title"
-                  style="font-weight: 1000"
-                >
+              <div style="background-color: #283040ff; width: 16px"></div>
+              <div class="d-flex flex-column ps-5 p-2" style="font-size: 24px">
+                <div id="prevInfo1Title" style="font-weight: 700">
                   Diafragma
                 </div>
-                <div id="prevInfo1Text">F/1.4-F/16</div>
+                <div id="prevInfo1Text" style="font-size: 20px">F/1.4-F/16</div>
               </div>
             </div>
             <!--col div-->
             <div class="d-flex" style="background-color: #241c1f10">
-              <div
-                style="background-color: #241c1f; width: 16px; opacity: 0.9"
-              ></div>
-              <div
-                class="d-flex flex-column ps-5 p-2"
-                style="font-size: 24px; opacity: 0.9"
-              >
-                <div
-                  class="text-dark"
-                  id="prevInfo2Title"
-                  style="font-weight: 1000"
-                >
+              <div style="background-color: #283040ff; width: 16px"></div>
+              <div class="d-flex flex-column ps-5 p-2" style="font-size: 24px">
+                <div id="prevInfo2Title" style="font-weight: 700">
                   Dimensiunea filtru
                 </div>
-                <div id="prevInfo2Text">52mm</div>
+                <div id="prevInfo2Text" style="font-size: 20px">52mm</div>
               </div>
             </div>
             <!--col div-->
             <div class="d-flex my-1" style="background-color: #241c1f10">
-              <div
-                style="background-color: #241c1f; width: 16px; opacity: 0.9"
-              ></div>
-              <div
-                class="d-flex flex-column ps-5 p-2"
-                style="font-size: 24px; opacity: 0.9"
-              >
+              <div style="background-color: #283040ff; width: 16px"></div>
+              <div class="d-flex flex-column ps-5 p-2" style="font-size: 24px">
                 <div
-                  class="text-dark"
                   id="prevInfo3Title"
-                  style="font-weight: 1000"
+                  style="color: #283040ff; font-weight: 700"
                 >
                   Distanta minima de focalizare
                 </div>
-                <div id="prevInfo3Text">46cm</div>
+                <div id="prevInfo3Text" style="font-size: 20px">46cm</div>
               </div>
             </div>
             <!--col div-->
             <div class="d-flex" style="background-color: #241c1f10">
-              <div
-                style="background-color: #241c1f; width: 16px; opacity: 0.9"
-              ></div>
+              <div style="background-color: #283040ff; width: 16px"></div>
               <div
                 class="d-flex flex-column ps-5 p-2"
-                style="font-size: 24px; opacity: 0.9"
+                style="color: #283040ff; font-size: 24px"
               >
                 <div
-                  class="text-dark"
                   id="prevInfo4Title"
-                  style="font-weight: 1000"
+                  style="color: #283040ff; font-weight: 700"
                 >
                   Dimensiunea
                 </div>
-                <div id="prevInfo4Text">6.35 x 4.32mm</div>
+                <div id="prevInfo4Text" style="font-size: 20px">
+                  6.35 x 4.32mm
+                </div>
               </div>
             </div>
             <!--col div-->
             <div class="d-flex my-1" style="background-color: #241c1f10">
-              <div
-                style="background-color: #241c1f; width: 16px; opacity: 0.9"
-              ></div>
-              <div
-                class="d-flex flex-column ps-5 p-2"
-                style="font-size: 24px; opacity: 0.9"
-              >
+              <div style="background-color: #283040ff; width: 16px"></div>
+              <div class="d-flex flex-column ps-5 p-2" style="font-size: 24px">
                 <div
-                  class="text-dark"
                   id="prevInfo5Title"
-                  style="font-weight: 1000"
+                  style="font-weight: 700; color: #283040ff"
                 >
                   Greutate
                 </div>
-                <div id="prevInfo5Text">230g</div>
+                <div id="prevInfo5Text" style="font-size: 20px">230g</div>
               </div>
             </div>
           </div>
@@ -313,7 +283,7 @@
             class="p-3 d-flex align-items-center justify-content-center"
             style="background-color: #283040ff"
           >
-            <img src="./logoDigiland.png" class="img-fluid" />
+            <img src="./logoDigiland.png" class="img-fluid w-50" />
           </div>
         </div>
       </div>
