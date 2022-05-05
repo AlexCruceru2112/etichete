@@ -29,11 +29,11 @@ const sonyBTN = document.getElementById("sonyBTN");
 let imgCont = document.getElementById("imgLogo");
 
 nikonBTN.addEventListener("click", () => {
-  imgCont.innerHTML = ` <img src="./Logo/nikon.png" class="img-fluid"/>`;
+  imgCont.innerHTML = ` <img src="./logo/nikon.png" class="img-fluid"/>`;
 });
 canonBTN.addEventListener("click", () => {
-  imgCont.innerHTML = ` <img src="./Logo/canon.png" class="img-fluid"/>`;
+  imgCont.innerHTML = ` <img src="./logo/canon.png" class="img-fluid"/>`;
 });
 sonyBTN.addEventListener("click", () => {
-  imgCont.innerHTML = ` <img src="./Logo/sony.png" class="img-fluid"/>`;
+  imgCont.innerHTML = ` <img src="./logo/sony.png" class="img-fluid"/>`;
 });
