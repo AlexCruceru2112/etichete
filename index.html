@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+    <title>Generator de Etichete</title>
+  </head>
+  <body class="bg-dark" style="zoom: 80%">
+    <div class="container d-flex align-items-end">
+      <!--GENERATOR-->
+      <div class="container m-5">
+        <div
+          class="border bg-light py-4 px-3 rounded shadow-sm"
+          style="width: 550px"
+        >
+          <div class="input-group mb-2">
+            <span class="input-group-text">QR Link</span>
+            <input
+              id="website"
+              type="url"
+              name="website"
+              value="https://www.facebook.com/"
+              placeholder="https://www.youtube.com/"
+              class="form-control"
+            />
+            <span class="btn btn-dark" onclick="generateQRCode()">Get QR</span>
+          </div>
+          <div class="input-group mb-2">
+            <span class="input-group-text">Marca</span>
+            <div class="d-flex ms-5">
+              <div class="btn btn-warning mx-1" id="nikonBTN">Nikon</div>
+              <div class="btn btn-danger mx-1" id="canonBTN">Canon</div>
+              <div class="btn btn-dark mx-1" id="sonyBTN">Sony</div>
+            </div>
+          </div>
+          <div class="input-group mb-2">
+            <span class="input-group-text">Descriere</span>
+            <input
+              type="text"
+              class="form-control"
+              id="nameInput"
+              onkeyup="document.getElementById('previewNume').innerHTML = this.value"
+            />
+          </div>
+
+          <div class="input-group mb-2">
+            <span class="input-group-text">Info #1</span>
+
+            <input
+              placeholder="Insert info#1 title"
+              type="text"
+              class="form-control"
+              id="input"
+              onkeyup="document.getElementById('prevInfo1Title').innerHTML = this.value"
+            />
+
+            <input
+              placeholder="Insert info#1 text"
+              type="text"
+              class="form-control"
+              id="input"
+              onkeyup="document.getElementById('prevInfo1Text').innerHTML = this.value "
+            />
+          </div>
+          <div class="input-group mb-2">
+            <span class="input-group-text">Info #2</span>
+            <input
+              placeholder="Insert info#2 title"
+              type="text"
+              class="form-control"
+              id="input"
+              onkeyup="document.getElementById('prevInfo2Title').innerHTML = this.value"
+            />
+
+            <input
+              placeholder="Insert info#2 text"
+              type="text"
+              class="form-control"
+              id="input"
+              onkeyup="document.getElementById('prevInfo2Text').innerHTML = this.value"
+            />
+          </div>
+          <div class="input-group mb-2">
+            <span class="input-group-text">Info #3</span>
+            <input
+              placeholder="Insert info#3 title"
+              type="text"
+              class="form-control"
+              id="input"
+              onkeyup="document.getElementById('prevInfo3Title').innerHTML = this.value"
+            />
+
+            <input
+              placeholder="Insert info#3 text"
+              type="text"
+              class="form-control"
+              id="input"
+              onkeyup="document.getElementById('prevInfo3Text').innerHTML = this.value"
+            />
+          </div>
+          <div class="input-group mb-2">
+            <span class="input-group-text">Info #4</span>
+            <input
+              placeholder="Insert info#4 title"
+              type="text"
+              class="form-control"
+              id="input"
+              onkeyup="document.getElementById('prevInfo4Title').innerHTML = this.value"
+            />
+
+            <input
+              placeholder="Insert info#4 text"
+              type="text"
+              class="form-control"
+              id="input"
+              onkeyup="document.getElementById('prevInfo4Text').innerHTML = this.value"
+            />
+          </div>
+          <div class="input-group mb-2">
+            <span class="input-group-text">Info #5</span>
+            <input
+              placeholder="Insert info#5 title"
+              type="text"
+              class="form-control"
+              id="input"
+              onkeyup="document.getElementById('prevInfo5Title').innerHTML = this.value"
+            />
+
+            <input
+              placeholder="Insert info#5 text"
+              type="text"
+              class="form-control"
+              id="input"
+              onkeyup="document.getElementById('prevInfo5Text').innerHTML = this.value"
+            />
+          </div>
+
+          <div class="d-flex mt-4">
+            <button type="button" class="btn btn-danger me-2" id="clearBTN">
+              Sterge datele
+            </button>
+            <button type="button" class="btn btn-success" id="printBTN">
+              Printeaza eticheta
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--LIVE PREVIEW-->
+      <div class="container m-5">
+        <div class="text-light lead fw-normal mb-2">Live Preview</div>
+        <div
+          class="p-2 shadow-sm border border-light border-2 bg-light"
+          id="eticheta"
+          style="width: 550px; min-height: 700px"
+        >
+          <div
+            style="
+              width: 125px;
+              height: 125px;
+              position: relative;
+              float: right;
+            "
+            id="imgLogo"
+          ></div>
+
+          <!--qr & descriere div-->
+          <div
+            class="d-flex align-items-start justify-content-between border-bottom border-5 border-dark pb-4"
+            style="margin-top: 125px"
+          >
+            <!--qr div-->
+            <canvas
+              class="border border-5 border-dark p-1"
+              id="qrcode"
+              style="width: 175px; height: 175px"
+            ></canvas>
+
+            <!--descriere div-->
+            <div
+              class="text-dark p-3 pt-5"
+              id="previewNume"
+              style="
+                word-wrap: break-all;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 35px;
+                opacity: 0.9;
+              "
+            >
+              DSLR Nikon D5600, Kit AF-P 18-55mm VR, Negru
+            </div>
+          </div>
+
+          <!--lista div-->
+          <div class="d-flex flex-column mb-3 p-4 my-4">
+            <!--col div-->
+            <div class="d-flex my-1" style="background-color: #241c1f10">
+              <div
+                style="background-color: #241c1f; width: 16px; opacity: 0.9"
+              ></div>
+              <div
+                class="d-flex flex-column ps-5 p-2"
+                style="font-size: 24px; opacity: 0.9"
+              >
+                <div
+                  class="text-dark"
+                  id="prevInfo1Title"
+                  style="font-weight: 1000"
+                >
+                  Diafragma
+                </div>
+                <div id="prevInfo1Text">F/1.4-F/16</div>
+              </div>
+            </div>
+            <!--col div-->
+            <div class="d-flex" style="background-color: #241c1f10">
+              <div
+                style="background-color: #241c1f; width: 16px; opacity: 0.9"
+              ></div>
+              <div
+                class="d-flex flex-column ps-5 p-2"
+                style="font-size: 24px; opacity: 0.9"
+              >
+                <div
+                  class="text-dark"
+                  id="prevInfo2Title"
+                  style="font-weight: 1000"
+                >
+                  Dimensiunea filtru
+                </div>
+                <div id="prevInfo2Text">52mm</div>
+              </div>
+            </div>
+            <!--col div-->
+            <div class="d-flex my-1" style="background-color: #241c1f10">
+              <div
+                style="background-color: #241c1f; width: 16px; opacity: 0.9"
+              ></div>
+              <div
+                class="d-flex flex-column ps-5 p-2"
+                style="font-size: 24px; opacity: 0.9"
+              >
+                <div
+                  class="text-dark"
+                  id="prevInfo3Title"
+                  style="font-weight: 1000"
+                >
+                  Distanta minima de focalizare
+                </div>
+                <div id="prevInfo3Text">46cm</div>
+              </div>
+            </div>
+            <!--col div-->
+            <div class="d-flex" style="background-color: #241c1f10">
+              <div
+                style="background-color: #241c1f; width: 16px; opacity: 0.9"
+              ></div>
+              <div
+                class="d-flex flex-column ps-5 p-2"
+                style="font-size: 24px; opacity: 0.9"
+              >
+                <div
+                  class="text-dark"
+                  id="prevInfo4Title"
+                  style="font-weight: 1000"
+                >
+                  Dimensiunea
+                </div>
+                <div id="prevInfo4Text">6.35 x 4.32mm</div>
+              </div>
+            </div>
+            <!--col div-->
+            <div class="d-flex my-1" style="background-color: #241c1f10">
+              <div
+                style="background-color: #241c1f; width: 16px; opacity: 0.9"
+              ></div>
+              <div
+                class="d-flex flex-column ps-5 p-2"
+                style="font-size: 24px; opacity: 0.9"
+              >
+                <div
+                  class="text-dark"
+                  id="prevInfo5Title"
+                  style="font-weight: 1000"
+                >
+                  Greutate
+                </div>
+                <div id="prevInfo5Text">230g</div>
+              </div>
+            </div>
+          </div>
+
+          <!--footer div-->
+          <div
+            class="p-3 d-flex align-items-center justify-content-center"
+            style="background-color: #283040ff"
+          >
+            <img src="./logoDigiland.png" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function generateQRCode() {
+        let website = document.getElementById("website").value;
+        if (website) {
+          let qrcodeContainer = document.getElementById("qrcode");
+          qrcodeContainer.innerHTML = "";
+          new QRious({
+            element: qrcodeContainer,
+            value: website,
+          });
+        } else {
+          alert("Please enter a valid URL");
+        }
+      }
+    </script>
+    <script src="./html2canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
