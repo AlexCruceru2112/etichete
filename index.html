@@ -164,118 +164,139 @@
         </div>
       </div>
       <!--LIVE PREVIEW-->
-      <div class="container m-5">
-        <div class="text-light lead fw-normal mb-2">Live Preview</div>
+      <div style="border: 5px solid red">
+        <div class="container m-5">
+          <div class="text-light lead fw-normal mb-2">Live Preview</div>
 
-        <div
-          class="p-2 border border-light border-2"
-          id="eticheta"
-          style="width: 226.77px; height: 453.54px; background-color: #fff"
-        >
           <div
-            class="mb-2"
-            style="width: 50px; height: 50px; position: relative; float: right"
-            id="imgLogo"
-          ></div>
-
-          <!--qr & descriere div-->
-          <div
-            class="d-flex align-items-center justify-content-between pb-1"
-            style="border-bottom: 2px solid #283040ff; width: 200px"
+            class="p-2 border border-light border-2"
+            id="eticheta"
+            style="width: 226.77px; height: 453.54px; background-color: #fff"
           >
-            <!--qr div-->
-            <canvas id="qrcode" style="width: 60px; height: 60px"></canvas>
-
-            <!--descriere div-->
             <div
-              class="ms-3"
-              id="previewNume"
+              class="mb-2"
               style="
-                text-align: left;
-                color: #283040ff;
-                word-wrap: break-all;
-                font-size: 13px;
-                font-weight: 700;
+                width: 50px;
+                height: 50px;
+                position: relative;
+                float: right;
               "
+              id="imgLogo"
+            ></div>
+
+            <!--qr & descriere div-->
+            <div
+              class="d-flex align-items-center justify-content-between pb-1"
+              style="border-bottom: 2px solid #283040ff; width: 200px"
             >
-              DSLR Nikon D5600, Kit AF-P 18-55mm VR, Negru
-            </div>
-          </div>
+              <!--qr div-->
+              <canvas id="qrcode" style="width: 60px; height: 60px"></canvas>
 
-          <!--lista div-->
-          <div class="d-flex flex-column mb-1 p-2">
-            <!--col div-->
-            <div class="d-flex my-1" style="background-color: #241c1f10">
-              <div style="background-color: #283040ff; width: 4px"></div>
-              <div class="d-flex flex-column ms-1 p-1" style="font-size: 13px">
-                <div id="prevInfo1Title" style="font-weight: 700">
-                  Diafragma
-                </div>
-                <div id="prevInfo1Text" style="font-size: 12px">F/1.4-F/16</div>
-              </div>
-            </div>
-            <!--col div-->
-            <div class="d-flex" style="background-color: #241c1f10">
-              <div style="background-color: #283040ff; width: 4px"></div>
-              <div class="d-flex flex-column ms-1 p-1" style="font-size: 13px">
-                <div id="prevInfo2Title" style="font-weight: 700">
-                  Dimensiunea filtru
-                </div>
-                <div id="prevInfo2Text" style="font-size: 12px">52mm</div>
-              </div>
-            </div>
-            <!--col div-->
-            <div class="d-flex my-1" style="background-color: #241c1f10">
-              <div style="background-color: #283040ff; width: 4px"></div>
-              <div class="d-flex flex-column ms-1 p-1" style="font-size: 13px">
-                <div
-                  id="prevInfo3Title"
-                  style="color: #283040ff; font-weight: 700"
-                >
-                  Distanta minima
-                </div>
-                <div id="prevInfo3Text" style="font-size: 12px">46cm</div>
-              </div>
-            </div>
-            <!--col div-->
-            <div class="d-flex" style="background-color: #241c1f10">
-              <div style="background-color: #283040ff; width: 4px"></div>
+              <!--descriere div-->
               <div
-                class="d-flex flex-column ms-1 p-1"
-                style="color: #283040ff; font-size: 13px"
+                class="ms-3"
+                id="previewNume"
+                style="
+                  text-align: left;
+                  color: #283040ff;
+                  word-wrap: break-all;
+                  font-size: 13px;
+                  font-weight: 700;
+                "
               >
-                <div
-                  id="prevInfo4Title"
-                  style="color: #283040ff; font-weight: 700"
-                >
-                  Dimensiunea
-                </div>
-                <div id="prevInfo4Text" style="font-size: 12px">
-                  6.35 x 4.32mm
-                </div>
+                DSLR Nikon D5600, Kit AF-P 18-55mm VR, Negru
               </div>
             </div>
-            <!--col div-->
-            <div class="d-flex my-1" style="background-color: #241c1f10">
-              <div style="background-color: #283040ff; width: 4px"></div>
-              <div class="d-flex flex-column ms-1 p-1" style="font-size: 13px">
-                <div
-                  id="prevInfo5Title"
-                  style="font-weight: 700; color: #283040ff"
-                >
-                  Greutate
-                </div>
-                <div id="prevInfo5Text" style="font-size: 12px">230g</div>
-              </div>
-            </div>
-          </div>
 
-          <!--footer div-->
-          <div
-            class="p-3 d-flex align-items-center justify-content-center"
-            style="background-color: #283040ff"
-          >
-            <img src="./logoDigiland.png" class="img-fluid w-50" />
+            <!--lista div-->
+            <div class="d-flex flex-column my-2">
+              <!--col div-->
+              <div class="d-flex my-1" style="background-color: #241c1f10">
+                <div style="background-color: #283040ff; width: 4px"></div>
+                <div
+                  class="d-flex flex-column ms-1 p-1"
+                  style="font-size: 13px"
+                >
+                  <div id="prevInfo1Title" style="font-weight: 700">
+                    Diafragma
+                  </div>
+                  <div id="prevInfo1Text" style="font-size: 12px">
+                    F/1.4-F/16
+                  </div>
+                </div>
+              </div>
+              <!--col div-->
+              <div class="d-flex" style="background-color: #241c1f10">
+                <div style="background-color: #283040ff; width: 4px"></div>
+                <div
+                  class="d-flex flex-column ms-1 p-1"
+                  style="font-size: 13px"
+                >
+                  <div id="prevInfo2Title" style="font-weight: 700">
+                    Dimensiunea filtru
+                  </div>
+                  <div id="prevInfo2Text" style="font-size: 12px">52mm</div>
+                </div>
+              </div>
+              <!--col div-->
+              <div class="d-flex my-1" style="background-color: #241c1f10">
+                <div style="background-color: #283040ff; width: 4px"></div>
+                <div
+                  class="d-flex flex-column ms-1 p-1"
+                  style="font-size: 13px"
+                >
+                  <div
+                    id="prevInfo3Title"
+                    style="color: #283040ff; font-weight: 700"
+                  >
+                    Distanta minima
+                  </div>
+                  <div id="prevInfo3Text" style="font-size: 12px">46cm</div>
+                </div>
+              </div>
+              <!--col div-->
+              <div class="d-flex" style="background-color: #241c1f10">
+                <div style="background-color: #283040ff; width: 4px"></div>
+                <div
+                  class="d-flex flex-column ms-1 p-1"
+                  style="color: #283040ff; font-size: 13px"
+                >
+                  <div
+                    id="prevInfo4Title"
+                    style="color: #283040ff; font-weight: 700"
+                  >
+                    Dimensiunea
+                  </div>
+                  <div id="prevInfo4Text" style="font-size: 12px">
+                    6.35 x 4.32mm
+                  </div>
+                </div>
+              </div>
+              <!--col div-->
+              <div class="d-flex my-1" style="background-color: #241c1f10">
+                <div style="background-color: #283040ff; width: 4px"></div>
+                <div
+                  class="d-flex flex-column ms-1 p-1"
+                  style="font-size: 13px"
+                >
+                  <div
+                    id="prevInfo5Title"
+                    style="font-weight: 700; color: #283040ff"
+                  >
+                    Greutate
+                  </div>
+                  <div id="prevInfo5Text" style="font-size: 12px">230g</div>
+                </div>
+              </div>
+            </div>
+
+            <!--footer div-->
+            <div
+              class="p-3 d-flex align-items-center justify-content-center"
+              style="background-color: #283040ff"
+            >
+              <img src="./logoDigiland.png" class="img-fluid w-50" />
+            </div>
           </div>
         </div>
       </div>
